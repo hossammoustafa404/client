@@ -1,8 +1,8 @@
 import Link from "next/link";
-import MainLogo from "./MainLogo";
-import ModeToggle from "./ModeToggle";
-import { cn } from "@lib/utils";
-import { buttonVariants } from "@components/ui/button";
+import MainLogo from "../components/MainLogo";
+import ModeToggle from "../components/ModeToggle";
+import { cn } from "@utils";
+import { buttonVariants } from "@components/ui/Button";
 
 const MainNavbar = () => {
   return (

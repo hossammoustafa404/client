@@ -1,10 +1,10 @@
-import MainNavbar from "@components/shared/MainNavbar";
+import MainNavbar from "@layout/MainNavbar";
 import "../styles/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import MainFooter from "@components/shared/MainFooter";
-import { cn } from "@lib/utils";
-import { ThemeProvider } from "@components/theme-provider";
+import MainFooter from "@layout/MainFooter";
+import { cn } from "@utils";
+import { ThemeProvider } from "@context/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={cn(inter.className, "flex flex-col min-h-screen")}>
         <ThemeProvider
           attribute="class"

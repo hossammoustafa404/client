@@ -1,8 +1,7 @@
-import SigninForm from "@components/signin/SigninForm";
-import SignupForm from "@components/signup/SignupForm";
-import { buttonVariants } from "@components/ui/button";
+import SignupForm from "@app/signup/_components/SignupForm";
+import { buttonVariants } from "@components/ui/Button";
 import { Separator } from "@components/ui/Separator";
-import { cn } from "@lib/utils";
+import { cn } from "@utils";
 import { Metadata } from "next";
 import Link from "next/link";
 
