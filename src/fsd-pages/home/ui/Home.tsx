@@ -1,4 +1,4 @@
-import { Button } from "@/shared/ui/shadcn/Button";
+import { Button } from "@/shared/ui/(shadcn)/Button";
 import { Eye } from "lucide-react";
 
 const Home = () => {

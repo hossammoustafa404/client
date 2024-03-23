@@ -1,2 +1,2 @@
-export { default as RootLayout } from "./RootLayout";
-export { default as DashboardLayout } from "./DashboardLayout";
+export { default as RootLayout } from "./ui/RootLayout";
+export { default as DashboardLayout } from "./ui/DashboardLayout";
