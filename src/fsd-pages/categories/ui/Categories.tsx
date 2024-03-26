@@ -4,8 +4,9 @@ import { ExportCategories } from "@/features/(categories)/export-categories";
 import { FilterCategories } from "@/features/(categories)/filter-categories";
 import { ImportCategories } from "@/features/(categories)/import-categories";
 import { cn } from "@/shared/lib/utils";
-import { Heading } from "@/shared/ui";
+import { Heading, TableActions } from "@/shared/ui";
 import { buttonVariants } from "@/shared/ui/(shadcn)/Button";
+import { CategoriesTable } from "@/widgets/(categories)/categories-table";
 import { Plus } from "lucide-react";
 import Link from "next/link";
 
@@ -18,7 +19,16 @@ const Categories = () => {
       </header>
 
       {/* Actions Box */}
-      <section className="p-6 mt-6 rounded-md flex items-center bg-white dark:bg-slate-950 shadow-md">
+      <TableActions
+        ImportAction={ImportCategories}
+        ExportAction={ExportCategories}
+        BulkAction={CategoriesBulkAction}
+        DeleteAction={DeleteCategories}
+        addTitle="Add Category"
+        addHref="/dashboard/categories/add"
+      />
+
+      {/* <section className="p-6 mt-6 rounded-md flex items-center bg-white dark:bg-slate-950 shadow-md">
         <div className="flex gap-x-3">
           <ExportCategories />
           <ImportCategories />
@@ -37,14 +47,16 @@ const Categories = () => {
             <span>Add Category</span>
           </Link>
         </div>
-      </section>
+      </section> */}
 
       {/* Filter Box*/}
       <section className="p-6 mt-6 rounded-md flex items-center bg-white dark:bg-slate-950 shadow-md">
         <FilterCategories />
       </section>
       {/* CategoriesTable */}
-      <section className="mt-4 shadow-md">Table</section>
+      <section className="mt-4 shadow-md">
+        <CategoriesTable />
+      </section>
     </>
   );
 };

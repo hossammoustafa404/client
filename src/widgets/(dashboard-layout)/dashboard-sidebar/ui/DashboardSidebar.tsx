@@ -74,7 +74,7 @@ const DashboardSidebar: FC<Props> = ({ className, ...props }) => {
                       variant={null}
                       className={cn(
                         "h-auto p-0 flex gap-x-3 font-medium text-md",
-                        !openSidebar ? "justify-center" : ""
+                        !openSidebar ? "w-full" : ""
                       )}
                       onClick={() => {
                         if (openCataglog === false) {
@@ -95,7 +95,7 @@ const DashboardSidebar: FC<Props> = ({ className, ...props }) => {
                       )}
                     </Button>
                     {openCataglog && (
-                      <ul className="mt-3 px-6 py-4 rounded-md bg-black/30">
+                      <ul className="mt-3 px-6 py-4 rounded-md bg-slate-700  text-white">
                         {catalogLinks.map(({ id, title, href }) => (
                           <li
                             key={id}

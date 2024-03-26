@@ -1,3 +1,4 @@
+import { ColumnHeader } from "@/shared/ui";
 import { ColumnDef } from "@tanstack/react-table";
 import { get } from "http";
 
@@ -11,7 +12,9 @@ export type Payment = {
 export const columns: ColumnDef<Payment>[] = [
   {
     accessorKey: "status",
-    header: () => <div className="text-center">Status</div>,
+    header: ({ column }) => (
+      <ColumnHeader column={column} title="status" className="" />
+    ),
     cell: ({ row }) => {
       return <div className="text-center">{row.getValue("status")}</div>;
     },
